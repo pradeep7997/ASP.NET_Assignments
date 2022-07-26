@@ -1,0 +1,18 @@
+﻿@model Employee
+<h3>Do you Want to delete this record?</h3>
+
+<div>
+    Employee ID:@Model.EmployeeId<br/>
+    Employee Name:@Model.EmployeeName<br/>
+    Employee Job:@Model.EmployeeJob<br/>
+    Employee Salary:@Model.EmployeeeSalary<br/>
+    Employee Department Number:@Model.DepartmentNo<br/>
+</div>
+
+<form action="/Employee/Delete" method="post">
+<input name="id" type="hidden" value="@Model.EmployeeId" />
+<input type="submit" value="Delete" />
+
+</form>
+<hr/>
+<a href="/Employee/Index">Back to List</a>

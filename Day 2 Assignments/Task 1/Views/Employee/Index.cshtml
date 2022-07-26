@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Employee>
+<h1> Employee Details</h1>
+<a href="Employee/Create"> Create New </a>
+
+<table border="2" width="800">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Job</th>
+        <th>Employee Salary</th>
+        <th>Department Number</th>
+
+    </tr>
+
+    @foreach(Employee item in Model)
+    {
+        <tr>
+            <td>@item.EmployeeId</td>
+            <td>@item.EmployeeName</td>
+            <td>@item.EmployeeJob</td>
+            <td>@item.EmployeeeSalary</td>
+            <td>@item.DepartmentNo</td>
+            <td>
+                <a href="Employee/Details/@item.EmployeeId">View</a>
+                <a href="Employee/Edit/@item.EmployeeId">Edit</a>
+                <a href="Employee/Delete/@item.EmployeeId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
