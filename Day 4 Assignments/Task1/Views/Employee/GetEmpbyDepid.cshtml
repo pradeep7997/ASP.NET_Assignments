@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplication4.Models.Employee>
+
+@{
+    ViewData["Title"] = "GetEmpbyDepid";
+}
+
+<h1>GetEmpbyDepid</h1>
+
+<form action="Index/GetEmpbyDepid" method="post">
+    <label>Enter Department No:</label>
+    <input type="text" name="EmployeeDeptno" />
+    <br/><br/>
+    <input type="submit" value="Show" />
+
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeJob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeDeptno)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeJob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeDeptno)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
