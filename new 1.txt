@@ -1,0 +1,7 @@
+1. Click Here to go to PNR Result page.(https://www.omanair.com/in/en)
+
+2. Enter your Booking Reference number/ PNR no/ Reservation Number.
+
+3. you will be redirected to “Manage MY Booking” section where you can see the Ticket is confirmed or on the waiting list.
+
+4. In Manage booking section, you can add seats, airport services, meals, travel insurance and modify or cancel flight ticket.
